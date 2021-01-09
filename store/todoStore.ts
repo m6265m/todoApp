@@ -2,7 +2,7 @@ import React from "react";
 import { IToDo } from "../types/todoTypes";
 import { createContainer } from "unstated-next";
 
-export const todoStore = () => {
+export const useTodoStore = () => {
   const [value, setValue] = React.useState<string>("");
   const [toDoList, setToDos] = React.useState<IToDo[]>([]);
   const [error, showError] = React.useState<Boolean>(false);
@@ -42,4 +42,4 @@ export const todoStore = () => {
   };
 };
 
-export const TodoContainer = createContainer(todoStore);
+export const TodoContainer = createContainer(useTodoStore);
